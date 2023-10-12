@@ -24,7 +24,9 @@ class VisitorController{
         $visitor->setRating($_POST['rating']);
         $visitor->setDate();
 
+        $dao = new \Ifba\Visitantes\model\DAO\VisitorDAO;
 
+        $dao -> inserir($visitor);
     }
 
     // public function sendForm() 

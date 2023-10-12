@@ -18,6 +18,10 @@ switch($url){
         $ctr->listVisitors();
     break;
 
+    case "salvar":
+        $ctr->save();
+    break;
+
     default:
         $ctr->notFound();
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Cadastro de Visitantes</h2>
-    <form action="enviar.php" method="POST">
+    <form action="salvar" method="POST">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required><br><br>
 
