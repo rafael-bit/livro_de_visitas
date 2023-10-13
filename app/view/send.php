@@ -16,8 +16,9 @@
       $name = isset($_POST['name']) ? $_POST['name'] : 'Nome não fornecido';
       $rating = isset($_POST['rating']) ? $_POST['rating'] : 'Nota não fornecida';
   ?>
-  <h1>Formulário enviado!</h1>
-  <p>Seu formulário foi enviado com sucesso. Agradecemos sua participação!</p>
+  <h1><?=$msgH1?></h1>
+
+  <p><?=$msgP?></p>
   <?php
   } else {
     echo '<p>O formulário não foi enviado</p>';

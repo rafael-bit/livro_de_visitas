@@ -2,8 +2,10 @@
 
 namespace Ifba\visitantes\model\DAO;
 
+use Ifba\Visitantes\model\entities\Visitor;
+
 class VisitorDAO {
-  # Php Data Object -> Classe PHP utilizada para a manipulação de database de dados
+  # PD0: Php Data Object -> Classe PHP utilizada para a manipulação de base de dados
   protected \PDO $connection;
 
   public function __construct()
@@ -19,7 +21,7 @@ class VisitorDAO {
       
   }
 
-  public function inserir($visitor)
+  public function insert($visitor): bool
   {
       $sql = "INSERT INTO visitors (name, date_time, rating) VALUES (?, ?, ?)";
 
@@ -29,5 +31,16 @@ class VisitorDAO {
       $prep->bindValue(3, $visitor->getRating());
 
       return $prep->execute();
+  }
+
+  public function findAll(): array 
+  {
+    $sql = "SELECT * FROM visitors";
+    $prep = $this->connection->prepare($sql);
+    $prep->execute();
+
+    $data = $prep->fetchAll(\PDO::FETCH_CLASS, Visitor::class);
+
+    return $data;
   }
 }
