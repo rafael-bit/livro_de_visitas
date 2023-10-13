@@ -27,6 +27,9 @@ class VisitorController{
         $dao = new \Ifba\Visitantes\model\DAO\VisitorDAO;
 
         $dao -> inserir($visitor);
+
+        require "./app/view/send.php";
+    
     }
 
     // public function sendForm() 
