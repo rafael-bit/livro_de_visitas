@@ -1,5 +1,9 @@
 <?php
 
+/* ----------------------------------------------------------------
+Classe de manipulação do banco de dados
+---------------------------------------------------------------- */
+
 namespace Ifba\visitantes\model\DAO;
 
 use Ifba\Visitantes\model\entities\Visitor;

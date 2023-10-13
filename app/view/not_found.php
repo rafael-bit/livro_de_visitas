@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página não encontrada</title>
-</head>
-<body>
-  <h1>Página não encontrada</h1>
-  <p>Verifique a rota e tente novamente</p>
-</body>
-</html>
+<?php require VIEW . "/header.php" ?>
+
+<h1>Página não encontrada</h1>
+<p>Verifique a rota e tente novamente</p>
+
+<?php require VIEW . "/footer.php" ?>

@@ -1,5 +1,9 @@
 <?php
 
+/* ----------------------------------------------------------------
+Controller principal que chama as páginas de acordo com a rota
+---------------------------------------------------------------- */
+
 namespace Ifba\Visitantes\controller;
 
 use Ifba\visitantes\model\DAO\VisitorDAO;
@@ -8,17 +12,20 @@ class VisitorController{
 
     public function index()
     {
-        $titulo = "Livro de Visitas - 3º ano Matutino";
         require "./app/view/home.php";
     }
 
     public function listVisitors()
     {
-        $dao = new \Ifba\Visitantes\model\DAO\VisitorDAO;
-        $titulo = "Livro de Visitas - 3º ano Matutino";
+        $dao = new VisitorDAO;
         $visitors = $dao->findAll();
-        require "./app/view/list_visitors.php";
 
+        $data = [
+            'titulo' => TITLE,
+            'visitors' => $visitors
+        ];
+        // require "./app/view/list_visitors.php";
+        // view("listarVisitas", $data);
     }
     public function save()
     {
@@ -38,14 +45,10 @@ class VisitorController{
         }
 
         require "./app/view/send.php";
-    
     }
 
     public function notFound()
     {
-        $titulo = "Not Found";
         require "./app/view/not_found.php";
-
     }
-
 }

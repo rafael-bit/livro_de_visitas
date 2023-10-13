@@ -1,5 +1,9 @@
 <?php
 
+/* ----------------------------------------------------------------
+Classe que representa o domínio (Visitante)
+---------------------------------------------------------------- */
+
 namespace Ifba\Visitantes\model\entities;
 
 class Visitor {
@@ -7,6 +11,13 @@ class Visitor {
   protected string $name;
   protected int $rating;
   protected string $date;
+
+  // public function __construct($name, $rating, $date) {
+  //   $this->name = $name;
+  //   $this->rating = $rating;
+  //   $this->date = $date;
+  // }
+
 
   public function getId(): int 
   {
@@ -41,7 +52,7 @@ class Visitor {
   public function getDate($format = 'us'): string 
   {
     if($format === 'br'){
-      return date('d-m-Y H:i:s', strtotime($this->date));
+      return date('d/m/Y h:i:s', strtotime($this->date));
     }
     
     return $this->date;

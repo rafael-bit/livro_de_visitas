@@ -1,15 +1,25 @@
 <?php
 
+/* ----------------------------------------------------------------
+Arquivo principal do PHP. Redireciona as rotas para o Controller
+---------------------------------------------------------------- */
+
 require "./vendor/autoload.php";
+require "./config.php";
 
 $url = $_GET['url'] ?? "/";
-$ctr = new \Ifba\Visitantes\controller\VisitorController();
+
+use \Ifba\Visitantes\controller\VisitorController;
+$ctr = new VisitorController();
 
 switch($url){
+    // A URL base é /cadastrar. Onde é exibido o formulário
     case "cadastrar":
         $ctr->index();
     break;
 
+    // Caso seja /, redireciona para /cadastro
+    // Tentar usar a constante BASEPATH
     case "/":
         header('Location: /livro_de_visitas/cadastrar');
     break;
@@ -22,6 +32,7 @@ switch($url){
         $ctr->save();
     break;
 
+    // Página não encontrada
     default:
         $ctr->notFound();
 }
