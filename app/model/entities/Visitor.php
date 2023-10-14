@@ -12,11 +12,13 @@ class Visitor {
   protected int $rating;
   protected string $date;
 
-  // public function __construct($name, $rating, $date) {
-  //   $this->name = $name;
-  //   $this->rating = $rating;
-  //   $this->date = $date;
+  //public function __construct($id, $name, $rating, $date) {
+   // $this->id = $id;
+   // $this->name = $name;
+  //  $this->rating = $rating;
+  //  $this->date = $date;
   // }
+
 
 
   public function getId(): int 

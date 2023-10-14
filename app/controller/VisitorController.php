@@ -17,18 +17,22 @@ class VisitorController{
 
     public function listVisitors()
     {
-        $dao = new VisitorDAO;
+        //require "./app/model/DAO/VisitorDAO.php";
+        $dao = new \Ifba\Visitantes\model\DAO\VisitorDAO;
         $visitors = $dao->findAll();
-
         $data = [
             'titulo' => TITLE,
             'visitors' => $visitors
         ];
-        // require "./app/view/list_visitors.php";
-        // view("listarVisitas", $data);
+        require "./app/view/list_visitors.php";
+        //view("listarVisitas", $data);
     }
     public function save()
     {
+        if(empty($_POST['name']) || empty($_POST['rating'])) {
+            header('Location: cadastrar');
+            exit;
+        }
         $visitor = new \Ifba\Visitantes\model\entities\Visitor();
         $visitor->setName($_POST['name'] ?? '');
         $visitor->setRating($_POST['rating'] ?? '');

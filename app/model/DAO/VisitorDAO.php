@@ -14,20 +14,25 @@ class VisitorDAO {
 
   public function __construct()
   {
-      $server = "localhost";
-      $database = "visitors";
-      $user = "root";
+      $server = "";
+      $port = "";
+      $database = "";
+      $user = "";
       $password = "";
-
-      $string = "mysql:host={$server};dbname={$database}";
-
-      $this->connection = new \PDO($string, $user, $password);
-      
+  
+      $string = "mysql:host={$server};port={$port};dbname={$database}";
+  
+      try {
+          $this->connection = new \PDO($string, $user, $password);
+      } catch (\PDOException $e) {
+          die("Erro na conexão com o banco de dados: " . $e->getMessage());
+      }
   }
+  
 
   public function insert($visitor): bool
   {
-      $sql = "INSERT INTO visitors (name, date_time, rating) VALUES (?, ?, ?)";
+      $sql = "INSERT INTO visitors (name, date, rating) VALUES (?, ?, ?)";
 
       $prep = $this->connection->prepare($sql);
       $prep->bindValue(1, $visitor->getName());
@@ -44,7 +49,7 @@ class VisitorDAO {
     $prep->execute();
 
     $data = $prep->fetchAll(\PDO::FETCH_CLASS, Visitor::class);
-
     return $data;
+    
   }
 }
