@@ -13,22 +13,18 @@ class VisitorDAO {
   protected \PDO $connection;
 
   public function __construct()
-  {
-      $server = "";
-      $port = "";
-      $database = "";
-      $user = "";
-      $password = "";
-  
-      $string = "mysql:host={$server};port={$port};dbname={$database}";
-  
-      try {
-          $this->connection = new \PDO($string, $user, $password);
-      } catch (\PDOException $e) {
-          die("Erro na conexão com o banco de dados: " . $e->getMessage());
-      }
-  }
-  
+{
+    $string = "mysql:host=" . BD['server'] . ";port=" . BD['port'] . ";dbname=" . BD['database'] . ";";
+
+    $user = BD['user'];
+    $password = BD['password'];
+
+    try {
+        $this->connection = new \PDO($string, $user, $password);
+    } catch (\PDOException $e) {
+        die("Erro na conexão com o banco de dados: " . $e->getMessage());
+    }
+}
 
   public function insert($visitor): bool
   {
