@@ -63,7 +63,7 @@ class Visitor {
   public function setDate(string $date = ''): void 
   {
     if($date === ''){
-      $date = date('Y-m-d h:i:s');
+      $date = date('Y-m-d H:i:s');
     }
 
     $this->date = $date;
