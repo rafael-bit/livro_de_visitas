@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5% !important; /* 10px */
+    max-width: 100% !important;
+}
+
+body {
+    font-size: 1.6rem !important;
+    font-family: 'Encode Sans Condensed', sans-serif !important;
+    height: 100vh;
+}
+
+header {
+    background-color: #003cff;
+    padding: 1rem 2rem;
+    min-height: 11vh;
+    max-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+li {
+    display: inline;
+    margin-right: 20px;
+    padding: 0 2rem;
+}
+  
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+  
+a:hover {
+    color: #00eaff;
+    transition: .3s ease-in-out;
+}
+  
+h1, h2 {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+form {
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: .4rem;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 1.5rem;
+    border: 2px solid #003cffaa;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: 0;
+}
+
+button {
+    background-color: #003cff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0077ff;
+    transition: .3s ease-in-out;
+}
+  

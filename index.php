@@ -7,7 +7,6 @@ Arquivo principal do PHP. Redireciona as rotas para o Controller
 require "./vendor/autoload.php";
 require "./config.php";
 
-
 $url = $_GET['url'] ?? "/";
 
 use \Ifba\Visitantes\controller\VisitorController;

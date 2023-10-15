@@ -1,8 +1,8 @@
 <?php require VIEW . "/header.php" ?>
 
-<h2>Cadastro de Visitantes</h2>
+<h2 id="h2">Cadastro de Visitantes</h2>
 
-<form action=" salvar" method="POST">
+<form action=" salvar" method="POST" id="form">
   <label for="name">Nome:</label>
   <input type="text" id="name" name="name" required><br><br>
 
