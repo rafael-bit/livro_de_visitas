@@ -18,6 +18,6 @@
     ?>
 </table>
 
-<a href="<?=BASEPATH?>"></a>
+<a href="<?=BASEPATH?>"> Voltar</a>
 
 <?php require VIEW . "/footer.php" ?>

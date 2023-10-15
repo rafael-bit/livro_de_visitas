@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php require VIEW . "/header.php" ?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário enviado</title>
-</head>
+<h1> <?=$msgH1?> </h1>
+<p> <?=$msgP?> </p>
 
-<body>
-  <h1><?=$msgH1?></h1>
-  <p><?=$msgP?></p>
-
-</body>
-
-</html>
+<?php require VIEW . "/footer.php" ?>
