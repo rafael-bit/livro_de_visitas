@@ -57,6 +57,20 @@ h1, h2 {
     text-align: center;
 }
 
+h1#notFound {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 30vw;
+    margin: 3rem auto;
+}
+
+p#rota {
+    text-align: center;
+    font-size: 2rem;
+}
+
 form {
     max-width: 40rem;
     margin: 0 auto;
