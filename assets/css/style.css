@@ -122,3 +122,40 @@ button:hover, .btn-back:hover {
 .btn-back {
     margin-left: 10rem;
 }
+
+table#list-visitors{
+    margin: 50px auto;
+    width: 60vw;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #003cff;
+    color: white;
+    width: 25vw;
+    padding: 10px;
+    /* border: 2px solid black; */
+}
+
+tr{
+    background-color: white;
+}
+
+tr:hover{
+    background-color: #cdcdcd;
+}
+
+tr:nth-child(even){
+    background-color: aliceblue;
+}
+
+tr:nth-child(even):hover{
+    background-color: #cdcdcd;
+}
+
+td{
+    /* border: 2px solid black; */
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}

@@ -1,5 +1,5 @@
 <?php require VIEW . "/header.php" ?>
-<table>
+<table id="list-visitors">
   <thead>
     <tr>
       <th>ID</th>
