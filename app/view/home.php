@@ -3,7 +3,7 @@
 <h2 id="h2">Cadastro de Visitantes</h2>
 
 <form action=" salvar" method="POST" id="form">
-  <label for="name">Nome:</label>
+  <label for="name">Nome completo:</label>
   <input type="text" id="name" name="name" required><br><br>
 
   <label for="rating">Nota do Evento:</label>

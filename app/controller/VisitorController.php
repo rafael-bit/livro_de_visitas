@@ -41,7 +41,7 @@ class VisitorController{
         $dao = new \Ifba\Visitantes\model\DAO\VisitorDAO;
 
         if($dao->insert($visitor)) {
-            $msgH1 = "Formulário enviado com sucesso";
+            $msgH1 = "Sucesso!";
             $msgP = "Seu formulário foi enviado com sucesso. Agradecemos sua participação!";
         } else {
             $msgH1 = "Ocorreu um erro ao enviar o formulário";

@@ -98,7 +98,7 @@ input[type="number"]:focus {
     outline: 0;
 }
 
-button {
+button, .btn-back {
     background-color: #003cff;
     color: #fff;
     padding: 10px 20px;
@@ -108,8 +108,17 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+button:hover, .btn-back:hover {
     background-color: #0077ff;
     transition: .3s ease-in-out;
 }
-  
+
+.p-mb {
+    margin: 5rem;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.btn-back {
+    margin-left: 10rem;
+}
