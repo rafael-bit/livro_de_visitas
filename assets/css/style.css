@@ -134,7 +134,6 @@ th{
     color: white;
     width: 25vw;
     padding: 10px;
-    /* border: 2px solid black; */
 }
 
 tr{
@@ -154,8 +153,49 @@ tr:nth-child(even):hover{
 }
 
 td{
-    /* border: 2px solid black; */
     padding: 8px;
     text-align: center;
     vertical-align: middle;
+}
+
+/*********** Stars **************/
+
+.rating {
+    display: flex;
+    padding: 2rem 0rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+.rating input:checked+label,
+.rating input:checked~label {
+    color: rgb(233, 233, 17);
+}
+
+.rating>label {
+    position: relative;
+    font-size: 4rem;
+    color: yellow;
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.rating>label:before {
+    content: "\2606";
+    position: absolute;
 }

@@ -9,9 +9,9 @@ define('VIEW', './app/view');
 define('TITLE', 'Livro de Visitas - SECITEC');
 
 define('BD', [
-  'server' => '',
-  'port' => '',
-  'database' => '',
-  'user' => '',
-  'password' => ''
+  'server' => '200.128.9.179',
+  'port' => '3306',
+  'database' => 'visitors',
+  'user' => 'remoto',
+  'password' => 'remoto'
 ]);
